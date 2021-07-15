@@ -1,19 +1,34 @@
 var express = require('express');
-var path = require('path');
 var app = express();
+var boardRouter = require('./router/board.js');
 
-// 여기서 app은 express의 인스턴스
+app.use(express.json());
+app.use(express.urlencoded({ extended : false }));
+
 app.get('/', function(req, res) {
-    res.send('GET request to the root');
-  });
-  
-  app.post('/', function(req, res) {
-    res.send('POST request to the root');
-  });
-  
-  app.get('/path', function(req, res) {
-    console.log('GET request to the /path');
-    next();	// 둘 이상의 핸들러 함수를 사용하기 위함.
-  }, function(req, res) {
-    res.send('This is /path page!');
-  });
+  var template =
+  `<!DOCTYPE html>
+  <html>
+    <body>
+      <form action='/login' method='post'>
+        ID : <input type='text' name='id'><br>
+        PWD : <input type='password' name='pwd'><br>
+        <input type='submit' value='login'>
+      </form>  
+    </body>
+  </html>`;
+  res.writeHead(200, {'ContentType':'text/html'});
+  res.write(template);
+  res.end();
+});
+
+app.post('/login', function(req, res) {
+  var body = req.body;
+  console.log(body);
+
+  res.send("ID : " + body.id + " / PWD : " + body.pwd);
+})
+
+app.use('/board', boardRouter);
+
+app.listen(3000, () => console.log('Server listen on port 3000...'));
