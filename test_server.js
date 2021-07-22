@@ -37,7 +37,7 @@ app.post('/writeAf', function(req, res) {
   conn.query(sql, params, function(err) {
     if(err) console.log('query is not excuted. insert fail...\n' + err);
     else res.redirect('/list');
-  })
+  });
 });
 
 app.listen(3000, () => console.log("Server is running on port 3000"));
