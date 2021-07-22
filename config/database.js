@@ -13,7 +13,7 @@ module.exports = {
     },
     connect: function(conn) {
         conn.connect(function(err) {
-            if(err) console.err('mysql connection err : ' + err);
+            if(err) console.log('mysql connection err : ' + err);
             else console.log('mysql is connected successfully!');
         });
     }
