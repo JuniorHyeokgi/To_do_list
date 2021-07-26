@@ -1,7 +1,4 @@
-var button = document.getElementById('button');
-var input = document.getElementById('input');
-var list = document.getElementById('list');
-var cnt = 1;
+var delete_button = document.getElementById('delete');
 
 button.addEventListener('click', clickButton);
 
@@ -15,7 +12,8 @@ function clickButton() {
     cnt++;
   }
 
-function remove(cnt) {
+function remove(con) {
+    var sql = "DELETE FROM list WHERE content = " + con;
     var li = document.getElementById('li'+cnt);
     list.removeChild(li);
   }

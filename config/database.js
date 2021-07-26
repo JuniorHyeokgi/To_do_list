@@ -4,7 +4,7 @@ var db_info = {
     port: '3306',
     user: 'root',
     password: 'cheerup1004',
-    database: 'db_test'
+    database: 'to_do_list_db'
 }
 
 module.exports = {
