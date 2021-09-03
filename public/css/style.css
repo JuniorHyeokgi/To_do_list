@@ -3,3 +3,23 @@
 body {
     font-family: "Nanum Brush Script", cursive;
 }
+#title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+#inputSection {
+    margin: auto;
+    margin-bottom: 0px;
+    width: 50%;
+    text-align: center;
+}
+#list {
+    margin: auto;
+    width: 50%;
+}
+.listContent {
+    height: 20px;
+}
+#delete {
+    float: right;
+}
