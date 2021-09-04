@@ -2160,7 +2160,7 @@ progress {
   color: #212529;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #88939e;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4839,7 +4839,7 @@ textarea.form-control-lg {
   color: #212529;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgb(0, 0, 0);
 }
 .list-group-item:first-child {
   border-top-left-radius: inherit;
