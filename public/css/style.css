@@ -8,6 +8,41 @@ body {
     margin-bottom: 20px;
     padding-left: 20px;
 }
+path.column {
+    animation: fadeIn 4s;
+}
+path.leaves {
+    opacity: 0;
+    animation: fadeIn 3s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+path.column.fadeOut {
+    animation: fadeOut 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+path.leaves.fadeOut {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 #inputSection {
     margin: auto;
     margin-bottom: 0px;
